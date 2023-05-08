@@ -1,37 +1,242 @@
-<ion-content>
-<div class="gflex">
-  <ion-card-header >
-    <h2 class="header3">Hello!!</h2>
-  </ion-card-header>
-
-<form [formGroup]="websiteForm" novalidate (ngSubmit)="login()">
-  <ion-card-content>
-    <div class="input">
-      <ion-col size="12">
-        <input
-          type="tel"
-          class="custom-input-field"
-          placeholder="Enter website name"
-          formControlName="name"
-          required
-        />
-      </ion-col>
+<ion-content *ngIf="websiteFlag">
+  <div class="gflex">
+    <ion-card-header >
+      <h2 class="header3">Webside!</h2>
+    </ion-card-header>
+  <form [formGroup]="websiteForm" novalidate (ngSubmit)="WebsiteInfo()">
+    <ion-card-content>
+      <div class="input">
+        <ion-col size="12">
+          <input
+            type="tel"
+            class="custom-input-field"
+            placeholder="Enter Website Name"
+            formControlName="name"
+            required
+          />
+        </ion-col>
+      </div>
+      <div class="input">
+        <ion-col size="12">
+          <input
+            type="tel"
+            class="custom-input-field"
+            placeholder="Enter Website URL"
+            formControlName="url"
+            required
+          />
+        </ion-col>
+      </div>
+      <div class="center">
+        <ion-button class="long-btn" type="submit">Submit</ion-button>
+      </div>
+    </ion-card-content>
+  </form>
+  </div>
+  </ion-content>
+  <ion-content *ngIf="blogsFlag">
+    <div class="gflex">
+      <ion-card-header >
+        <h2 class="header3">Blogs!!</h2>
+      </ion-card-header>
+    <form [formGroup]="blogsForm" novalidate (ngSubmit)="BlogsInfo()">
+      <ion-card-content>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter meta_deta_description"
+              formControlName="meta_deta_description"
+              required
+            />
+          </ion-col>
+        </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter Title"
+              formControlName="title"
+              required
+            />
+          </ion-col>
+        </div>
+          <div lcass="input">
+            <ion-col size="12">
+            <label for="file">Choose Image to upload</label>
+            </ion-col>
+            <ion-col size="12">
+            <input type="file" id="file" formControlName="image" name="file" multiple />
+            </ion-col>
+          </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter URL"
+              formControlName="url"
+            />
+          </ion-col>
+        </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter Description"
+              formControlName="description"
+            />
+          </ion-col>
+        </div>
+        <div class="center">
+          <ion-button class="long-btn" type="submit">Submit</ion-button>
+        </div>
+      </ion-card-content>
+    </form>
     </div>
-    <div class="input">
-      <ion-col size="12">
-        <input
-          type="password"
-          class="custom-input-field"
-          placeholder="Enter website URL"
-          formControlName="url"
-          required
-        />
-      </ion-col>
+  </ion-content>
+  <ion-content *ngIf="contactFlag">
+    <div class="gflex">
+      <ion-card-header >
+        <h2 class="header3">contact Us!!</h2>
+      </ion-card-header>
+    <form [formGroup]="contactForm" novalidate (ngSubmit)="ContactInfo()">
+      <ion-card-content>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="  Enter name"
+              formControlName="name"
+              required
+            />
+          </ion-col>
+        </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter email"
+              formControlName="email"
+              required
+            />
+          </ion-col>
+        </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter  message"
+              formControlName="message"
+            />
+          </ion-col>
+        </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter  phone"
+              formControlName="phone"
+            />
+          </ion-col>
+        </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter  subject"
+              formControlName="subject"
+            />
+          </ion-col>
+        </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter Status"
+              formControlName="status"
+            />
+          </ion-col>
+        </div>
+        <div class="center">
+          <ion-button class="long-btn" type="submit">Submit</ion-button>
+        </div>
+      </ion-card-content>
+    </form>
     </div>
-    <div class="center">
-      <ion-button class="long-btn" type="submit">Submit</ion-button>
+  </ion-content>
+  <ion-content *ngIf="careerFlag">
+    <div class="gflex">
+      <ion-card-header >
+        <h2 class="header3">Career!!</h2>
+      </ion-card-header>
+    <form [formGroup]="careerForm" novalidate (ngSubmit)="CareerInfo()">
+      <ion-card-content>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter Name"
+              formControlName="name"
+              required
+            />
+          </ion-col>
+        </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter Email"
+              formControlName="email"
+              required
+            />
+          </ion-col>
+        </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter Message"
+              formControlName="message"
+            />
+          </ion-col>
+        </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter Phone"
+              formControlName="phone"
+            />
+          </ion-col>
+        </div>
+        <div class="input">
+          <ion-col size="12">
+            <input
+              type="tel"
+              class="custom-input-field"
+              placeholder="Enter Resume"
+              formControlName="resume"
+            />
+          </ion-col>
+        </div>
+        <div class="center">
+          <ion-button class="long-btn" type="submit">Submit</ion-button>
+        </div>
+      </ion-card-content>
+    </form>
     </div>
-  </ion-card-content>
-</form>
-</div>
-</ion-content>
+  </ion-content>
